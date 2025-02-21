@@ -1,14 +1,14 @@
-﻿; Quick Snip & Copy to Clipboard (Alt + Shift + S)
+﻿; QuickSnip.ahk
+; Press Alt+Shift+S to snip and copy to clipboard
 !+S::
 {
-    Send, {LWin Down}{Shift Down}{S}{Shift Up}{LWin Up} ; Open Snipping Tool
-    Sleep, 500 ; Wait for it to open
-    ClipWait, 2 ; Wait for the clipboard to contain an image
-    if (ErrorLevel)
-    {
+    Send, {LWin Down}{Shift Down}{S}{Shift Up}{LWin Up}  ; Open Snip & Sketch
+    Sleep, 500
+    ClipWait, 2
+    if (ErrorLevel) {
         MsgBox, Snipping failed. Try again!
         Return
     }
-    MsgBox, Image copied to clipboard! ; Confirmation message
+    MsgBox, Image copied to clipboard!
 }
 Return
